@@ -6,4 +6,4 @@
 #### spring.thymeleaf.prefix=classpath:/templates/
 #### spring.thymeleaf.suffix=.html
 
-##### Added backup file  .jsp for knowing the diffrence between the thymeleaf and jsp
+##### Added backup file  .jsp for knowing the diffrence between the thymeleaf and jsp pages
