@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+          <h3>WELCOME TO STUDENT REGISTER PAGE</h3>
+<form action="student/save" method="POST">
+<pre>
+NAME:<input type="text" name="name"/>                  
+Gender:<input type="radio" name="stdGen"/>
+       <input type="radio" name="stdGen"/>
+Fee:   <input type="text" name="Fee"/>
+Course: <select type="stdCourse">
+          <option value=" ">-select-</option>
+          <option value="CORE">CORE</option>
+          <option value="ADV">ADV</option>
+          <option value="SPRING">SPRING</option>
+SLOT: <input type="checkbox" name="stdSlot"/>7AM
+      <input type="checkbox" name="stdSlot"/>8AM
+ADDRESS:   <textarea th:field="stdAddr"></textarea>    
+   <input type="submit" value="ADD STUDENT" class="btn btn-success">
+ </form>
+</body>
+</html>
+</pre>
