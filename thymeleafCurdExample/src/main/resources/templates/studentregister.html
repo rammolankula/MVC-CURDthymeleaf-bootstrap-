@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org/">
+<head>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+<body>
+<div class="container">
+   <div class="card">
+      <div class="card-head bg-primary text-white text-center">
+          <h3>WELCOME TO STUDENT REGISTER PAGE</h3>
+      </div>
+      <div class="card-body"></div>
+ 
+<form th:action="@{/student/save}" method="POST" th:object="${student}">
+
+        <div class="row">
+             <div class="col-4">NAME </div>
+             <div class="col-4">
+                 <input type="text" th:field="*{stdName}"/>
+             </div>
+             </div>
+             
+           <div class="row">
+            <div class="col-4">Gender:</div>
+             <div class="col-4">
+               <input type="radio" th:field="*{stdGen}" value="Female"/>
+               <input type="radio" th:field="*{stdGen}" value="Male"/>
+             </div>
+             </div>
+             
+             <div class="row">
+            <div class="col-4">Fee:</div>
+             <div class="col-4">
+              <input type="text" th:field="*{stdFee}" value="Fee"/>
+             </div>
+             </div>
+             
+             <div class="row">
+            <div class="col-4">Course:</div>
+             <div class="col-4">
+              <select th:field="*{stdCourse}">
+          <option value=" ">-select-</option>
+          <option value="CORE">CORE</option>
+          <option value="ADV">ADV</option>
+          <option value="SPRING">SPRING</option>
+             </select>
+             </div>
+             </div>
+             
+             <div class="row">
+            <div class="col-4">SLOT:</div>
+             <div class="col-4">
+             <input type="checkbox" th:field="*{stdSlot}" value="7AM">7AM
+              <input type="checkbox" th:field="*{stdSlot}" value="8AM" >8AM
+             </div>
+             </div>
+             
+              <div class="row">
+            <div class="col-4">ADDRESS:</div>
+             <div class="col-4">
+             <textarea th:field="*{stdAddr}"></textarea>
+             </div>
+             </div>       
+   <input type="submit" value="ADD STUDENT" class="btn btn-success">
+ </form>
+ </div>
+ 
+<div class="card-footer bg-info text-white text-center">
+       <span th:text="${message}"></span>
+</div>
+</div>
+</body>
+</html>
+</pre>

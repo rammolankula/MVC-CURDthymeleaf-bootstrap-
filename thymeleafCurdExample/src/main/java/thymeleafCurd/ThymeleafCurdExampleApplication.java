@@ -1,0 +1,13 @@
+package thymeleafCurd;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ThymeleafCurdExampleApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ThymeleafCurdExampleApplication.class, args);
+	}
+
+}
